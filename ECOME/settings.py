@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-i)v+**%!2@7yh1&&pn57ptv17ix7+bt&d1cqrkwyx_vm%-hlwa
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*', '52.41.36.82','54.191.253.12','44.226.122.3']
 
 # Setting up for payment support using stripe The Publishable key is used on the frontend while the Secret key is used in the backend
 STRIPE_SECRET_KEY = 'sk_test_51LzQwaCJA0lCvXM0KTpA7v4kax7O0QXZ9NtD7PaKdFRuXpxGuXuJpG6ZsGLdZYXhuMqKIAdabge8zlBiuUvYUHGY00syL32Zna'
@@ -53,6 +53,10 @@ INSTALLED_APPS = [
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:8080",
+    "https://ecome-shoe-com.onrender.com",
+    '52.41.36.82',
+    '54.191.253.12',
+    '44.226.122.3',
 ]
 
 MIDDLEWARE = [
