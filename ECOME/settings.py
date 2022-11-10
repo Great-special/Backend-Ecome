@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-i)v+**%!2@7yh1&&pn57ptv17ix7+bt&d1cqrkwyx_vm%-hlwa'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['*', '52.41.36.82','54.191.253.12','44.226.122.3']
+ALLOWED_HOSTS = ['*']
 
 # Setting up for payment support using stripe The Publishable key is used on the frontend while the Secret key is used in the backend
 STRIPE_SECRET_KEY = 'sk_test_51LzQwaCJA0lCvXM0KTpA7v4kax7O0QXZ9NtD7PaKdFRuXpxGuXuJpG6ZsGLdZYXhuMqKIAdabge8zlBiuUvYUHGY00syL32Zna'
@@ -54,9 +54,6 @@ INSTALLED_APPS = [
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:8080",
     "https://ecome-shoe-com.onrender.com",
-    '52.41.36.82',
-    '54.191.253.12',
-    '44.226.122.3',
 ]
 
 MIDDLEWARE = [
@@ -138,16 +135,14 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'media')
-
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-MEDIA_URL = 'media/'
+MEDIA_URL = '/media/'
 
-MEDIA_ROOT = BASE_DIR/'media/'
+MEDIA_ROOT = BASE_DIR / 'media/'
 
 

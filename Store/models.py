@@ -16,7 +16,7 @@ class Product(models.Model):
     price = models.FloatField()
     digital = models.BooleanField(default = True, null = True)
     category = models.ForeignKey('Category', related_name='products', blank = True, on_delete = models.CASCADE, null = True)
-    file_name = models.FileField(upload_to='files/', blank = True, null = True)
+    # file_name = models.FileField(upload_to='files/', blank = True, null = True)
     image = models.ImageField(upload_to='images/', null=True, blank = True)
     thumbnail = models.ImageField(upload_to='thumbnail/', null=True, blank = True)
     date_added = models.DateTimeField(auto_now_add = True, null=True)
@@ -30,10 +30,10 @@ class Product(models.Model):
     def get_absolute_url(self):
         return f"/{self.category.slug}/{self.slug}/"
     
-    def get_file_name(self):
-        if self.file_name:
-            return 'https://backend-ecome-production.up.railway.app' + self.file_name.url
-        return ''
+    # def get_file_name(self):
+    #     if self.file_name:
+    #         return 'https://backend-ecome-production.up.railway.app' + self.file_name.url
+    #     return ''
     
     def get_image(self):
         if self.image:

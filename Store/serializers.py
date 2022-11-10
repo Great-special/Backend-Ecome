@@ -14,7 +14,7 @@ class ProductSerializer(serializers.ModelSerializer):
             'digital',
             'get_image',
             'get_thumbnail',
-            'get_file_name',
+            # 'get_file_name',
             'get_absolute_url',
         )
 
