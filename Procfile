@@ -1,1 +1,1 @@
-web: gunicorn ECOME.wsgi --log-file -
+web: gunicorn ECOME.wsgi 
